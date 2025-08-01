@@ -1,4 +1,4 @@
-package modelo;
+package br.com.bytebank.banco.modelo;
 
 public abstract class Conta {
 
@@ -15,5 +15,11 @@ public abstract class Conta {
         this.numero = numero;
         //this.saldo = 100;
         //System.out.println("Estou criando uma conta " + this.numero);
+    }
+
+    public abstract void deposita(double valor);
+
+    public void saca(double valor) throws SaldoInsuficienteException{
+        
     }
 }

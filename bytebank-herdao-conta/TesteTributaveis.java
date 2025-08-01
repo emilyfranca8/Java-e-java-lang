@@ -6,9 +6,13 @@ public class TesteTributaveis {
         modelo.ContaCorrente cc= new modelo.ContaCorrente(222, 333);
         cc.deposita(100.0);
 
-        modelo.SeguroDeVida seguro = new SeguroDeVidda();
+        modelo.SeguroDeVida seguro = new modelo.SeguroDeVida();
 
-        CalculadorDeImposto calc = new CalculadorDeImposto();
+        modelo.CalculadorDeImposto calc = new modelo.CalculadorDeImposto();
+        calc.registra(cc);
+        calc.registra(seguro);
+
+        System.out.println(calc.getTotalImposto());
         
    }
 }
